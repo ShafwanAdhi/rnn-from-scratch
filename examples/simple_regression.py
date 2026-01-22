@@ -43,7 +43,7 @@ rnn = RNNScratch(
 )
 
 # Train the model
-history = rnn.fit(X, y, epochs=100000, learning_rate=0.00001, verbose=True, return_history=True)
+history = rnn.fit(X, y, epochs=50000, learning_rate=0.00001, verbose=True, return_history=True)
 
 # Make predictions
 print("Predictions vs Actual")
