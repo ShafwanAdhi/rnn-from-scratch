@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rnn-from-scratch"
+version = "0.1.0"
+description = "A clean, educational implementation of Recurrent Neural Networks built from scratch using NumPy"
+readme = "README.md"
+authors = [
+    { name = "Shafwan Adhi", email = "adhishafwan@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["rnn", "neural-network", "deep-learning", "machine-learning", "numpy", "from-scratch"]
+
+dependencies = [
+    "numpy>=1.19.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ShafwanAdhi/rnn-from-scratch"
+Documentation = "https://github.com/ShafwanAdhi/rnn-from-scratch#readme"
+Repository = "https://github.com/ShafwanAdhi/rnn-from-scratch"
+Issues = "https://github.com/ShafwanAdhi/rnn-from-scratch/issues"
+
+[tool.setuptools]
+packages = ["rnn_from_scratch"]
+
+[tool.black]
+line-length = 100
+target-version = ['py37']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
